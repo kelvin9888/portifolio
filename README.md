@@ -2,7 +2,7 @@
 Portifolio do prototico
 
 ## Tarefas 
-fazer no git
+fazer no git bora
 ## icones 
 :package: nova funcionalidade
 :up: atualizção 
