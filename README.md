@@ -2,7 +2,7 @@
 Portifolio do prototico
 
 ## Tarefas 
-fazer no git bora
+fazer no git bora jmlkalkm
 ## icones 
 :package: nova funcionalidade
 :up: atualizção 
