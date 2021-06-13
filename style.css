@@ -7,10 +7,90 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lobster+Two:wght@700&family=Monoton&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
+:root{
+    --font-primary: "Ballon 2", serif;
+    --font-secundary: "Bangers", serif;
+    --font-action: "Mulish", serif;
+}
+
+.hamburguer{
+   /* background-color: red;*/
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+   
+}
+.show-menu .hamburguer{
+    right: 15rem;
+}
+
+.line{
+    width: 100%;
+    height: .3rem;
+    background-color:#a901cd;
+    box-shadow: 0.1rem 0.1rem 0.1px;
+    transition: transform 1s;  
+    
+}
+.show-menu #line1{
+    transform: rotate(45deg) translate(.6rem, .48rem);
+    background-color: #ad85d6;
+    box-shadow: none;
+}
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.6rem, -.48rem);
+    background-color: #ad85d6;
+    box-shadow: none;
+}
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.hamburguer span{
+    position: absolute;
+    left: 4rem;
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d616fe;
+    color: rgb(19, 18, 18);
+    font-family: "Mulish", serif;
+    font-size: 1.5rem;
+    opacity: 0;
+}
+   
+.hamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #d616fe;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+.show-menu .hamburguer:hover span{
+    opacity: 1;
+    transition: 1s;
+    text-transform: uppercase;
+}
+
 header{
     width: 100%;
     height: 100vh;
@@ -59,7 +139,7 @@ header{
 }
 
 .banner p{
-    font-family: "Ballon 2", serif;
+    font-family: var(--font-primary);
     color: #346b7a;
     font-size: 2.5rem;
     text-shadow: .2rem , 1rem 1px rgba(0,0,0,0.4);
@@ -69,7 +149,7 @@ header{
 }
 
 .banner button{
-    font-family: "Bangers", serif;
+    font-family: var(--font-secundary);
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1.5;
@@ -83,6 +163,11 @@ header{
     cursor: pointer;
     animation: moveBanner 1s 0.9s forwards;
     opacity: 0;
+    transition: color 0.5s;
+    
+}
+.banner button:hover{
+    color: #ad85d6;
 }
 @keyframes moveBanner{
     0%{
@@ -93,5 +178,71 @@ header{
         opacity: 1;
     }
 
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 35%;
+    right: 0%;
+    transform: translate(-5%, -30%);
+
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+
+}
+
+.menu-link{
+    font-family: "Roboto Mono", serif;
+    font-size: 2.5rem;
+    color: black;
+    transition: color 0.5s;
+}
+.menu-link:hover{
+   color: #d616fe;
+
+}
+
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.social-media i{
+    color: #ffffff;
+    background-color: rgb(176, 101, 197);
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 0.5s;
+}
+
+.social-media i:hover{
+    background-color: #d616fe;
 }
 
