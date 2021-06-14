@@ -29,7 +29,7 @@
     height: 2.9rem;
     position: fixed;
     z-index: 100;
-    right: 2rem;
+    right: 3rem;
     top: 2rem;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
    
 }
 .show-menu .hamburguer{
-    right: 15rem;
+    right: 25rem;
 }
 
 .line{
@@ -131,12 +131,12 @@ header{
    right: 53%;
 }
 .banner h1{
-    color: #6348b0;
+    color: #6348b0;;
     font-size: 6rem;
     font-family: "Lobster Two", serif;
-    font-weight: 200;
-    text-shadow: .07rem .07rem 6px rgba(0,0,0,0.4);
-    margin-bottom: 2rem;
+    font-weight: 400;
+    text-shadow: .07rem .07rem 8px rgba(0,0,0,0.4);
+    margin-bottom: 3rem;
     animation: moveBanner 1s 0.5s forwards;
     opacity: 0;
 }
@@ -156,10 +156,11 @@ header{
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1.5;
-    color: #c9c2c2;
-    background: #6a3093;  
-    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  
-    background: linear-gradient(to right, #a044ff, #6a3093); 
+    color: #ffffff;
+    background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  
+background: linear-gradient(to right, #3c1053, #5b2d70); 
+
     padding: 1rem 3rem;
     border: none;
     border-radius: 5px;
@@ -170,7 +171,7 @@ header{
     
 }
 .banner button:hover{
-    color: #ad85d6;
+    color: #400040;
 }
 @keyframes moveBanner{
     0%{
@@ -184,12 +185,12 @@ header{
 }
 
 .sidebar{
-    width: 20rem;
+    width: 30rem;
     height: 100vh;
     background-color: #ffffff;
     position: fixed;
     top: 0;
-    right: -20rem;
+    right: -30rem;
     transition: all 1s;
 
 }
@@ -201,22 +202,22 @@ header{
 .menu{
     position: absolute;
     top: 35%;
-    right: 0%;
+    right: 7%;
     transform: translate(-5%, -30%);
 
 }
 
 .menu-item{
     text-align: center;
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
 
 }
 
 .menu-link{
     font-family: "Roboto Mono", serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: black;
-    transition: color 0.5s;
+    transition: color 0.7s;
 }
 .menu-link:hover{
    color: #d616fe;
@@ -234,7 +235,7 @@ header{
 
 .social-media i{
     color: #ffffff;
-    background-color: rgb(176, 101, 197);
+    background-color: rgb(112, 50, 129);
     height: 4.5rem;
     width: 4.5rem;
     font-size: 4rem;
@@ -337,6 +338,30 @@ header{
     object-fit: cover;
     width: 100%;
 }
+
+.servicos{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 30rem;
+    height: 30rem;   
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 20rem;
+    height: 30rem;
+}
+
+
+
 
 @media screen and (max-width: 768px){
    .banner h1{
