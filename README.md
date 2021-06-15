@@ -7,6 +7,6 @@ Portifolio do prototico
 fazer no git bora jmlkalkm
 ## icones 
 - :package: nova funcionalidade
-- :up: atualizção 
+- :up: atualização 
 - :beetle: correção de bug
 - :checkered_flag: realease 
